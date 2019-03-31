@@ -13,19 +13,20 @@ import androidx.room.PrimaryKey
             (
             entity = TypeUser::class,
             parentColumns = arrayOf("id"),
-            childColumns = arrayOf("user_type")
-            // onDelete = ForeignKey.CASCADE
+            childColumns = arrayOf("user_type"),
+            onDelete = ForeignKey.CASCADE
         ),
         ForeignKey
             (
             entity = StatusUser::class,
             parentColumns = arrayOf("id"),
-            childColumns = arrayOf("user_status")
-            // onDelete = ForeignKey.CASCADE
+            childColumns = arrayOf("user_status"),
+            onDelete = ForeignKey.CASCADE
         )
     ))
 data class SystemUser(
-    @PrimaryKey var id: Int,
+    @PrimaryKey
+    @ColumnInfo(name = "id") var id: Int,
     @ColumnInfo(name = "name") var firstName: String?,
     @ColumnInfo(name = "last_name") var lastName: String?,
     @ColumnInfo(name = "mother_last_name") var motherLastName: String?,

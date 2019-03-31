@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "TypeUser")
 data class TypeUser(
-    @PrimaryKey var id: Int,
-    @ColumnInfo(name = "type_desc") var typeDescription: String?
+    @PrimaryKey(autoGenerate = true) var id: Int,
+    @ColumnInfo(name = "type_desc") var typeDescription: String
 )

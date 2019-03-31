@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "StatusUnit")
 data class StatusUnit(
-    @PrimaryKey var id: Int,
-    @ColumnInfo(name = "status_unit_desc") var statusUnitDescription: String?
+    @PrimaryKey(autoGenerate = true) var id: Int,
+    @ColumnInfo(name = "status_unit_desc") var statusUnitDescription: String
 )
