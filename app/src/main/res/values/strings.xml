@@ -36,4 +36,15 @@
     <string name="day_schedule">Día(s) de la semana</string>
     <string name="login">Iniciar sesión</string>
     <string name="students_by_subject">Estudiantes inscritos</string>
+    <string name="hint_matricula">Matricula</string>
+    <string name="hint_noEmpleado">No. de empleado</string>
+    <string-array name="Usuarios">
+        <item>Alumno</item>
+        <item>Maestro</item>
+        <item>Admnistrador</item>
+    </string-array>
+    <string name="hint_password">Contraseña</string>
+    <string name="error_message_matricula">Matricula solo debe contener numeros</string>
+    <string name="error_message_password">Se debe llenar la contraseña</string>
+    <string name="error_valid_matricula_password">Matricula o contraseña equivocada</string>
 </resources>
