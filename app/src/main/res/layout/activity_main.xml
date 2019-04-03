@@ -1,26 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       xmlns:tools="http://schemas.android.com/tools"
+                                       android:id="@+id/nestedScrollView"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:background="@color/colorBackground"
+                                       android:paddingBottom="20dp"
+                                       android:paddingLeft="20dp"
+                                       android:paddingRight="20dp"
+                                       android:paddingTop="20dp"
+                                       tools:context=".MainActivity">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/login"
-                android:textAllCaps="false"
-                android:onClick="login"
-        />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dip"
+                android:src="@drawable/logo"/>
 
-    </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutMatricula"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="50dip"
+                android:textColorHint="@color/colorTextHint"
+                app:counterOverflowTextAppearance="@style/TextAppearance.AppCompat"
+                app:hintEnabled="false">
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextMatricula"
+                    android:layout_width="261dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/setfield"
+                    android:hint="@string/hint_matricula"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dip"
+                    android:paddingLeft="10dip"
+                    android:textColorHint="@color/colorTextHint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="50dip"
+                android:textColorHint="@color/colorTextHint"
+                app:counterOverflowTextAppearance="@style/TextAppearance.AppCompat"
+                app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextPassword"
+                    android:layout_width="261dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/setfield"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingStart="10dip"
+                    android:paddingLeft="10dip"
+                    android:textColorHint="@color/colorTextHint"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+                android:layout_width="180dip"
+                android:layout_height="match_parent" android:id="@+id/spinner" android:layout_weight="1"
+                android:background="@drawable/setfieldusuario"
+                android:layout_marginTop="20dip"
+                android:dropDownWidth="match_parent" android:spinnerMode="dropdown"
+                android:entries="@array/Usuarios" android:textAlignment="center"
+                android:backgroundTint="@color/materialGray" android:layout_marginLeft="90dip"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonLogin"
+                android:layout_width="240dip"
+                android:layout_height="50dip"
+                android:layout_marginLeft="60dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/acceptbtn"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>
